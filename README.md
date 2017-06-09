@@ -1,5 +1,6 @@
 # Binge
-The drinking game app.
+---
+## The drinking game app
 
 ### Colors
 
@@ -22,3 +23,11 @@ The drinking game app.
 - ![#000000](https://placehold.it/15/000000/000000?text=+) `#000000`
 
 - ![#ffffff](https://placehold.it/15/ffffff/000000?text=+) `#ffffff`
+
+### Fonts
+
+- ![#ffffff](https://www.fonts.com/font/linotype/avenir-next?QueryFontType=Web&src=GoogleWebFonts) `Avenir Next (Standard)`
+
+- ![#ffffff](https://developer.apple.com/fonts/) `San Francisco`
+
+- ![#ffffff](https://fonts.google.com/specimen/Raleway) `Raleway`
