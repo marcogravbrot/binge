@@ -1,2 +1,2 @@
-# binge
+# Binge
 The drinking game app.
