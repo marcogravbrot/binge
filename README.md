@@ -18,3 +18,7 @@ The drinking game app.
 - ![#5856d6](https://placehold.it/15/5856d6/000000?text=+) `#5856d6`
 
 - ![#ff2d55](https://placehold.it/15/ff2d55/000000?text=+) `#ff2d55`
+
+- ![#000000](https://placehold.it/15/000000/000000?text=+) `#000000`
+
+- ![#ffffff](https://placehold.it/15/ffffff/000000?text=+) `#ffffff`
