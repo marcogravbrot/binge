@@ -26,9 +26,9 @@
 
 ### Fonts
 
-- ![Avenir Next](https://www.fonts.com/font/linotype/avenir-next?QueryFontType=Web&src=GoogleWebFonts)
+- [Avenir Next](https://www.fonts.com/font/linotype/avenir-next?QueryFontType=Web&src=GoogleWebFonts)
 
-- ![San Francisco](https://developer.apple.com/fonts/)
+- [San Francisco](https://developer.apple.com/fonts/)
 
-- ![Raleway](https://fonts.google.com/specimen/Raleway)
+- [Raleway](https://fonts.google.com/specimen/Raleway)
 
