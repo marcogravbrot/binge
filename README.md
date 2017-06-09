@@ -3,7 +3,6 @@
 ## The drinking game app
 
 ### Colors
-
 - ![#ff3b30](https://placehold.it/15/ff3b30/000000?text=+) `#ff3b30`
 
 - ![#ff9500](https://placehold.it/15/ff9500/000000?text=+) `#ff9500`
@@ -25,7 +24,6 @@
 - ![#ffffff](https://placehold.it/15/ffffff/000000?text=+) `#ffffff`
 
 ### Fonts
-
 - [Avenir Next](https://www.fonts.com/font/linotype/avenir-next?QueryFontType=Web&src=GoogleWebFonts)
 
 - [San Francisco](https://developer.apple.com/fonts/)
