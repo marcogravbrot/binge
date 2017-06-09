@@ -1,5 +1,5 @@
 # Binge
----
+
 ## The drinking game app
 
 ### Colors
