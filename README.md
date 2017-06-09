@@ -2,7 +2,7 @@
 
 ## The drinking game app
 
-### Colors :fire:
+### Colors
 
 - ![#ff3b30](https://placehold.it/15/ff3b30/000000?text=+) `#ff3b30`
 
@@ -24,7 +24,7 @@
 
 - ![#ffffff](https://placehold.it/15/ffffff/000000?text=+) `#ffffff`
 
-### Fonts :heart:
+### Fonts
 
 - [Avenir Next](https://www.fonts.com/font/linotype/avenir-next?QueryFontType=Web&src=GoogleWebFonts)
 
@@ -32,3 +32,10 @@
 
 - [Raleway](https://fonts.google.com/specimen/Raleway)
 
+### Inspiration
+
+- [UI Design](https://dribbble.com/prakhar)
+
+- [Logo Design](https://dribbble.com/vadimcarazan)
+
+- [Design Language](https://dribbble.com/Adamsay)
