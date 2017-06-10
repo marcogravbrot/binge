@@ -48,6 +48,11 @@ class SelectGameViewController: UIViewController {
             "UNNAMED GAME",
             "Each round there will appear a random description on screen and the amount you need to name. After you have named one, you pass it on until you have reached the desired amout. If you fail to name the amount in time every player will have to drink. A player can pass but will then have to take a drink.",
             "StartListGame",
+        ],
+        [
+            "THE CARD SPEAKS",
+            "The card speaks for itself. Either one player will read up the card or you pass the phone along. Rules are simple, do as the card says.",
+            "StartCardSpeaksGame",
         ]
     ]
     

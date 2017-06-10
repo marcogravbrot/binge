@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G12b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -172,6 +172,7 @@
                         <segue destination="SpT-iQ-Pip" kind="show" identifier="StartMostLikely" id="Zvu-NW-ln5"/>
                         <segue destination="qV5-XK-Dho" kind="show" identifier="StartTruthLie" id="yoP-R4-K0v"/>
                         <segue destination="wlT-yh-g92" kind="show" identifier="StartListGame" id="5wx-lw-aPM"/>
+                        <segue destination="cSc-Mi-haZ" kind="show" identifier="StartCardSpeaksGame" id="Sfi-nl-GRe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rKB-Lt-LI0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -480,8 +481,72 @@
             </objects>
             <point key="canvasLocation" x="1583" y="-613"/>
         </scene>
+        <!--Card Speaks Game-->
+        <scene sceneID="Xth-fO-y3y">
+            <objects>
+                <viewController storyboardIdentifier="CardSpeaksGame" id="cSc-Mi-haZ" customClass="CardSpeaksGame" customModule="Binge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="t0Q-R8-nuH"/>
+                        <viewControllerLayoutGuide type="bottom" id="QqC-hu-l5l"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ba3-Hh-KXV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kissed someone on the first date" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IhZ-9E-Wna">
+                                <rect key="frame" x="80" y="84" width="215" height="519"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Card Speaks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xq5-VM-r6J">
+                                <rect key="frame" x="134" y="39" width="154" height="28"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbu-n5-cv6">
+                                <rect key="frame" x="32" y="36" width="72" height="34"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="g74-pa-uvZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <state key="normal" title="EXIT">
+                                    <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="405-dF-JAX" kind="show" id="zFf-Uw-UzS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="QqC-hu-l5l" firstAttribute="top" secondItem="IhZ-9E-Wna" secondAttribute="bottom" constant="64" id="5ZG-ze-Amn"/>
+                            <constraint firstItem="vbu-n5-cv6" firstAttribute="top" secondItem="t0Q-R8-nuH" secondAttribute="bottom" constant="16" id="F7G-Vg-U8m"/>
+                            <constraint firstItem="vbu-n5-cv6" firstAttribute="leading" secondItem="ba3-Hh-KXV" secondAttribute="leadingMargin" constant="16" id="FbO-B2-Yku"/>
+                            <constraint firstItem="IhZ-9E-Wna" firstAttribute="centerX" secondItem="ba3-Hh-KXV" secondAttribute="centerX" id="bgx-cP-MG7"/>
+                            <constraint firstItem="IhZ-9E-Wna" firstAttribute="leading" secondItem="ba3-Hh-KXV" secondAttribute="leadingMargin" constant="64" id="ikJ-3t-Zao"/>
+                            <constraint firstItem="IhZ-9E-Wna" firstAttribute="top" secondItem="t0Q-R8-nuH" secondAttribute="bottom" constant="64" id="jvz-dQ-vJb"/>
+                            <constraint firstItem="Xq5-VM-r6J" firstAttribute="centerY" secondItem="vbu-n5-cv6" secondAttribute="centerY" id="rCF-8G-gk9"/>
+                            <constraint firstItem="Xq5-VM-r6J" firstAttribute="leading" secondItem="vbu-n5-cv6" secondAttribute="trailing" constant="30" id="y8P-5E-b3r"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="vbu-n5-cv6" id="Kox-hD-CiK"/>
+                        <outlet property="background" destination="ba3-Hh-KXV" id="ceM-tm-gnC"/>
+                        <outlet property="text" destination="IhZ-9E-Wna" id="d6T-qA-10T"/>
+                        <outlet property="titleText" destination="Xq5-VM-r6J" id="dyK-5x-7B5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8PR-o1-0MN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer cancelsTouchesInView="NO" id="mMo-JX-mZy"/>
+            </objects>
+            <point key="canvasLocation" x="2551" y="-613"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2pa-gY-5VP"/>
+        <segue reference="zFf-Uw-UzS"/>
     </inferredMetricsTieBreakers>
 </document>
