@@ -136,6 +136,7 @@ class NeverGame: UIViewController {
         backButton.setTitleColor(color, for: .normal)
         background.backgroundColor = color
         
+        text.text = neverGame[neverGameCount]
         text.textColor = UIColor.white
         titleText.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.55)
         

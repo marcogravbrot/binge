@@ -20,7 +20,6 @@ extension UIView {
 }
 
 class SelectGameViewController: UIViewController {
-    @IBOutlet weak var backButton: UIButton!
     //@IBOutlet weak var image: UIImageView!
 
     @IBOutlet weak var gameCount: UIPageControl!
@@ -43,6 +42,11 @@ class SelectGameViewController: UIViewController {
             "TRUTH OR LIE",
             "The phone will be passed around the table. The screen will say TRUTH or LIE and give you a topic. You will then have to create a truth or a lie around the topic where the other players will guess wether you lied or told a truth. Players who guess wrong will have to drink, and you will have to drink for every player that guessed correctly.",
             "StartTruthLie"
+        ],
+        [
+            "UNNAMED GAME",
+            "Every turn a selected description will be given and the amount of items you have to name that fit the description. Someone beings first, and then rotate clockwise or anti-clockwise. You name one item until you have named as many it asks for. If you fail to do this in time every player will have to drink. Any player can say ´Pass! but then that player has to take a drink while the game continues",
+            "StartListGame",
         ]
     ]
     
@@ -63,9 +67,45 @@ class SelectGameViewController: UIViewController {
         swipeUp.direction = UISwipeGestureRecognizerDirection.up
         self.view.addGestureRecognizer(swipeUp)
         
-        backButton.layer.cornerRadius = backButton.frame.height/2
-        backButton.layer.masksToBounds = true
-        backButton.clipsToBounds = true
+        let title = gameList[self.currentCount][0]
+        let description = gameList[self.currentCount][1]
+        
+        self.gameTitle.text = title as? String
+
+        self.gameDescription.text = description as? String
+        self.gameCount.currentPage = self.currentCount
+        
+        /*let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [
+            UIColor(red: 79/255, green: 172/255, blue: 254/255, alpha: 1).cgColor,
+            UIColor(red: 0, green: 242/255, blue: 254/255, alpha: 1).cgColor
+        ]
+        
+        gradientLayer.locations = [0.0, 1.0]
+        gradientLayer.frame = self.view.bounds
+        
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100), execute: {
+            print("s1")
+            UIView.animate(withDuration: 0.1, animations: {
+                print("s2")
+                gradientLayer.colors = [
+                    UIColor(red: 79/255, green: 172/255, blue: 254/255, alpha: 1).cgColor,
+                    UIColor(red: 0, green: 242/255, blue: 254/255, alpha: 1).cgColor
+                ]
+                
+                gradientLayer.locations = [0.0, 1.0]
+                gradientLayer.frame = self.view.bounds
+                
+                self.view.layer.insertSublayer(gradientLayer, at: 0)
+            })
+        })*/
+        
+        gameCount.numberOfPages = gameList.count
+        
+        print(gameCount.numberOfPages)
+        print(gameList.count)
         
         /*image.layer.cornerRadius = 8
         image.layer.masksToBounds = true
