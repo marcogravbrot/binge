@@ -2,7 +2,7 @@
 //  NeverGame.swift
 //  Binge
 //
-//  Created by Marco Gravbrøt on 09/06/2017.
+//  Created by Marco Gravbrøt on 09/06/2017. -- wow rly
 //  Copyright © 2017 Marco Gravbrøt. All rights reserved.
 //
 
