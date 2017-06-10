@@ -148,11 +148,15 @@ class NeverGame: UIViewController {
     }
     
     @IBAction func nextOption(_ sender: UITapGestureRecognizer) {
-        if (neverGameCount < neverGame.count) {
+        if (neverGameCount < neverGame.count-1) {
             neverGameCount += 1
         } else {
+            neverGame.shuffle()
             neverGameCount = 0
         }
+        
+        print(neverGameCount)
+        print(neverGame.count)
         
         DispatchQueue.main.async {
             UIView.animate(withDuration: 0.2, animations: {

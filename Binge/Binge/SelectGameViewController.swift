@@ -21,7 +21,7 @@ extension UIView {
 
 class SelectGameViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var image: UIImageView!
+    //@IBOutlet weak var image: UIImageView!
 
     @IBOutlet weak var gameCount: UIPageControl!
     @IBOutlet weak var gameTitle: UILabel!
@@ -67,9 +67,9 @@ class SelectGameViewController: UIViewController {
         backButton.layer.masksToBounds = true
         backButton.clipsToBounds = true
         
-        image.layer.cornerRadius = 8
+        /*image.layer.cornerRadius = 8
         image.layer.masksToBounds = true
-        image.clipsToBounds = true
+        image.clipsToBounds = true*/
 
         // Do any additional setup after loading the view.
     }

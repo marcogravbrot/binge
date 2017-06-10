@@ -134,9 +134,10 @@ class TruthGameViewController: UIViewController {
     }
     
     @IBAction func nextOption(_ sender: UITapGestureRecognizer) {
-        if (truthGameCount < truthGame.count) {
+        if (truthGameCount < truthGame.count-1) {
             truthGameCount += 1
         } else {
+            truthGame.shuffle()
             truthGameCount = 0
         }
         
@@ -147,6 +148,7 @@ class TruthGameViewController: UIViewController {
                 self.text.fadeTransition(0.2)
                 self.text.text = self.truthOrLie()
                 
+                self.topic.fadeTransition(0.2)
                 self.topic.text = self.truthGame[self.truthGameCount]
                 
                 self.backButton.setTitleColor(self.color, for: .normal)

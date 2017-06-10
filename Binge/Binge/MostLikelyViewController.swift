@@ -42,6 +42,7 @@ class MostLikelyViewController: UIViewController {
     @IBOutlet weak var timerText: UILabel!
     
     var timerCount = 3
+    var canSkip = false
     
     var colors : [UIColor] = [
         UIColor(red: 0, green: 120/255, blue: 1, alpha: 1),
@@ -169,7 +170,12 @@ class MostLikelyViewController: UIViewController {
     func timerUpdate() {
         if (timerCount > 0) {
             timerCount -= 1
+            timerText.fadeTransition(0.1)
             timerText.text = String(describing: timerCount)
+        } else if (timerCount == 0) && (!canSkip) && (timerText.text != "3") {
+            canSkip = true
+            timerText.fadeTransition(0.3)
+            timerText.text = "POINT!"
         }
     }
     
@@ -179,14 +185,21 @@ class MostLikelyViewController: UIViewController {
     }
     
     @IBAction func nextOption(_ sender: UITapGestureRecognizer) {
-        if (mostLikelyCount < mostLikely.count) {
+        if !canSkip {
+            return
+        }
+        
+        if (mostLikelyCount < mostLikely.count-1) {
             mostLikelyCount += 1
         } else {
+            mostLikely.shuffle()
             mostLikelyCount = 0
         }
         
         timerText.fadeTransition(0.2)
         timerText.text = "3"
+        
+        canSkip = false
         
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
             self.timerCount = 3
