@@ -17,6 +17,7 @@
 		A62240921EEAFACC00D53CDB /* NeverGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62240911EEAFACC00D53CDB /* NeverGame.swift */; };
 		A642FD331EEBE2EA00F386E1 /* ListGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642FD321EEBE2EA00F386E1 /* ListGame.swift */; };
 		A642FD371EEC9CDD00F386E1 /* CardSpeaksGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642FD361EEC9CDD00F386E1 /* CardSpeaksGame.swift */; };
+		A642FD391EECAAC900F386E1 /* UpDownGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642FD381EECAAC900F386E1 /* UpDownGame.swift */; };
 		A69367AD1EEB636F0024EA61 /* TruthGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69367AC1EEB636F0024EA61 /* TruthGameViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		A62240911EEAFACC00D53CDB /* NeverGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NeverGame.swift; path = ../NeverGame.swift; sourceTree = "<group>"; };
 		A642FD321EEBE2EA00F386E1 /* ListGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListGame.swift; sourceTree = "<group>"; };
 		A642FD361EEC9CDD00F386E1 /* CardSpeaksGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardSpeaksGame.swift; path = ../CardSpeaksGame.swift; sourceTree = "<group>"; };
+		A642FD381EECAAC900F386E1 /* UpDownGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpDownGame.swift; sourceTree = "<group>"; };
 		A69367AC1EEB636F0024EA61 /* TruthGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TruthGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +71,7 @@
 				A60C4AFC1EEAC18500A85038 /* AppDelegate.swift */,
 				A60C4AFE1EEAC18500A85038 /* ViewController.swift */,
 				A60C4B001EEAC18500A85038 /* Main.storyboard */,
+				A642FD381EECAAC900F386E1 /* UpDownGame.swift */,
 				A69367AC1EEB636F0024EA61 /* TruthGameViewController.swift */,
 				A60CDC411EEB5BBF0022F163 /* MostLikelyViewController.swift */,
 				A62240911EEAFACC00D53CDB /* NeverGame.swift */,
@@ -159,6 +162,7 @@
 				A60CDC421EEB5BBF0022F163 /* MostLikelyViewController.swift in Sources */,
 				A642FD371EEC9CDD00F386E1 /* CardSpeaksGame.swift in Sources */,
 				A60C4AFF1EEAC18500A85038 /* ViewController.swift in Sources */,
+				A642FD391EECAAC900F386E1 /* UpDownGame.swift in Sources */,
 				A6092E451EEAE41E0045EAE8 /* SelectGameViewController.swift in Sources */,
 				A69367AD1EEB636F0024EA61 /* TruthGameViewController.swift in Sources */,
 				A642FD331EEBE2EA00F386E1 /* ListGame.swift in Sources */,
