@@ -53,6 +53,11 @@ class SelectGameViewController: UIViewController {
             "THE CARD SPEAKS",
             "The card speaks for itself. Either one player will read up the card or you pass the phone along. Rules are simple, do as the card says.",
             "StartCardSpeaksGame",
+        ],
+        [
+            "UP OR DOWN",
+            "Description Description Description Description Description Description Description Description Description Description Description Description Description ",
+            "StartUpDownGame",
         ]
     ]
     
