@@ -136,6 +136,7 @@ class NeverGame: UIViewController {
         backButton.setTitleColor(color, for: .normal)
         background.backgroundColor = color
         
+        text.text = neverGame[neverGameCount]
         text.textColor = UIColor.white
         titleText.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.55)
         
@@ -148,11 +149,15 @@ class NeverGame: UIViewController {
     }
     
     @IBAction func nextOption(_ sender: UITapGestureRecognizer) {
-        if (neverGameCount < neverGame.count) {
+        if (neverGameCount < neverGame.count-1) {
             neverGameCount += 1
         } else {
+            neverGame.shuffle()
             neverGameCount = 0
         }
+        
+        print(neverGameCount)
+        print(neverGame.count)
         
         DispatchQueue.main.async {
             UIView.animate(withDuration: 0.2, animations: {

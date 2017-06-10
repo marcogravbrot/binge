@@ -1,5 +1,5 @@
 //
-//  TruthGameViewController.swift
+//  ListGame.swift
 //  Binge
 //
 //  Created by Marco Gravbrøt on 10/06/2017.
@@ -8,15 +8,17 @@
 
 import UIKit
 
-class TruthGameViewController: UIViewController {
+class ListGame: UIViewController {
 
     @IBOutlet weak var titleText: UILabel!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet var background: UIView!
     @IBOutlet weak var text: UILabel!
-    @IBOutlet weak var topic: UILabel!
     
-    var timerCount = 3
+    @IBOutlet weak var timerText: UILabel!
+    
+    var timerCount = 20
+    var canSkip = false
     
     var colors : [UIColor] = [
         UIColor(red: 0, green: 120/255, blue: 1, alpha: 1),
@@ -37,82 +39,28 @@ class TruthGameViewController: UIViewController {
         return colors[Int(arc4random_uniform(UInt32(Int(colors.count))))]
     }
     
-    var truthGame : [String] = [
-        "Name",
-        "Scared",
-        "Squash",
-        "Cherry",
-        "Oven",
-        "Thread",
-        "Symptomatic",
-        "Badge",
-        "Peaceful",
-        "Plough",
-        "Rhythm",
-        "Hose",
-        "Leather",
-        "Tiger",
-        "Land",
-        "Haunt",
-        "Story",
-        "Alluring",
-        "Steel",
-        "Stitch",
-        "Brave",
-        "Vigorous",
-        "Excited",
-        "Royal",
-        "Flashy",
-        "Frantic",
-        "Dear",
-        "Violet",
-        "Awful",
-        "Wriggle",
-        "Tremendous",
-        "Sulky",
-        "Squalid",
-        "Bulb",
-        "Scientific",
-        "Gigantic",
-        "Cure",
-        "Need",
-        "Judge",
-        "Carriage",
-        "Glistening",
-        "Stain",
-        "Eager",
-        "Fowl",
-        "Sudden",
-        "Rob",
-        "Actually",
-        "Threatening",
-        "Ambiguous",
-        "Maniacal"
+    var listGame : [String] = [
+        "8 American Presidents",
+        "6 Bands or artists",
+        "8 vegetables",
+        "8 sex positions",
     ]
     
-    var truthGameCount = Int()
+    var listGameCount = Int()
     
-    func truthOrLie() -> String {
-        if (arc4random_uniform(2) == 0) {
-            return "TRUTH"
-        } else {
-            return "LIE"
-        }
-    }
-
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask { return UIInterfaceOrientationMask.landscape }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        truthGame.shuffle()
-        truthGameCount = Int(arc4random_uniform(UInt32(truthGame.count)))
+        listGame.shuffle()
+        listGameCount = Int(arc4random_uniform(UInt32(listGame.count)))
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(nextOption(_:)))
         
-        self.view.addGestureRecognizer(tapGesture)
-        
         color = getColor()
+        
+        self.view.addGestureRecognizer(tapGesture)
         
         backButton.layer.cornerRadius = backButton.frame.height/2
         backButton.layer.masksToBounds = true
@@ -121,11 +69,24 @@ class TruthGameViewController: UIViewController {
         backButton.setTitleColor(color, for: .normal)
         background.backgroundColor = color
         
-        topic.text = truthGame[truthGameCount]
+        timerText.text = "20"
         
-        text.text = truthOrLie()
+        text.text = listGame[listGameCount]
         text.textColor = UIColor.white
         titleText.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.55)
+        
+        _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.timerUpdate), userInfo: nil, repeats: true)
+    }
+    
+    func timerUpdate() {
+        if (timerCount > 0) {
+            timerCount -= 1
+            timerText.fadeTransition(0.1)
+            timerText.text = String(describing: timerCount)
+        } else {
+            text.text = "TIME IS UP! EVERYBODY"
+            timerText.text = "DRINK!"
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -134,22 +95,23 @@ class TruthGameViewController: UIViewController {
     }
     
     @IBAction func nextOption(_ sender: UITapGestureRecognizer) {
-        if (truthGameCount < truthGame.count-1) {
-            truthGameCount += 1
+        if (listGameCount < listGame.count-1) {
+            listGameCount += 1
         } else {
-            truthGame.shuffle()
-            truthGameCount = 0
+            listGame.shuffle()
+            listGameCount = 0
         }
         
-        self.color = getColor()
+        timerText.fadeTransition(0.2)
+        timerText.text = "20"
+        self.timerCount = 20
         
         DispatchQueue.main.async {
             UIView.animate(withDuration: 0.2, animations: {
-                self.text.fadeTransition(0.2)
-                self.text.text = self.truthOrLie()
+                self.color = self.getColor()
                 
-                self.topic.fadeTransition(0.2)
-                self.topic.text = self.truthGame[self.truthGameCount]
+                self.text.fadeTransition(0.2)
+                self.text.text = self.listGame[self.listGameCount]
                 
                 self.backButton.setTitleColor(self.color, for: .normal)
                 self.background.backgroundColor = self.color
