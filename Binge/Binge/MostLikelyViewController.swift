@@ -3,6 +3,7 @@
 //  Binge
 //
 //  Created by Marco Gravbrøt on 10/06/2017.
+//  Resources by Martin L Thommesen & Oliver R Jahre
 //  Copyright © 2017 Marco Gravbrøt. All rights reserved.
 //
 

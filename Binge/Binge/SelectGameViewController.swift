@@ -3,6 +3,7 @@
 //  Binge
 //
 //  Created by Marco Gravbrøt on 09/06/2017.
+//  Resources by Martin L Thommesen & Oliver R Jahre
 //  Copyright © 2017 Marco Gravbrøt. All rights reserved.
 //
 
@@ -30,22 +31,22 @@ class SelectGameViewController: UIViewController {
     var gameList : [[Any]] = [
         [
             "NEVER HAVE I EVER",
-            "A random statement will be put on the screen where the announcer will read it out loud. Anyone who has done the statement has to take a drink.",
+            "A random statement will appear on screen and you will read it out loud. Anyone who admits to have done what you read out will need to take a drink.",
             "StartNeverGame"
         ],
         [
             "MOST LIKELY TO",
-            "A random statement will be put on the screen where the announcer will read it out. After 3 seconds everyone will point on the person they believe would be most likely to do the statement. The one who receives the most votes has to take a drink.",
+            "A random statement will appear on screen where you will read it out loud. After three seconds everyone will point to the person they believe would be most likely to do what you read out and the one who receives the most votes will take a drink.",
             "StartMostLikely"
         ],
         [
             "TRUTH OR LIE",
-            "The phone will be passed around the table. The screen will say TRUTH or LIE and give you a topic. You will then have to create a truth or a lie around the topic where the other players will guess wether you lied or told a truth. Players who guess wrong will have to drink, and you will have to drink for every player that guessed correctly.",
+            "The phone will be passed around the table. The screen will display TRUTH or LIE and hand you a topic. You will then make up a truth or a lie around the topic and the other players will have guess wether you lied or told the truth. Players who guess wrong will have to drink, and you will have to drink for every player that guess correctly.",
             "StartTruthLie"
         ],
         [
             "UNNAMED GAME",
-            "Every turn a selected description will be given and the amount of items you have to name that fit the description. Someone beings first, and then rotate clockwise or anti-clockwise. You name one item until you have named as many it asks for. If you fail to do this in time every player will have to drink. Any player can say ´Pass! but then that player has to take a drink while the game continues",
+            "Each round there will appear a random description on screen and the amount you need to name. After you have named one, you pass it on until you have reached the desired amout. If you fail to name the amount in time every player will have to drink. A player can pass but will then have to take a drink.",
             "StartListGame",
         ]
     ]

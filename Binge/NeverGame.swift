@@ -3,6 +3,7 @@
 //  Binge
 //
 //  Code written by Marco Gravbrøt on 09/06/2017.
+//  Resources by Martin L Thommesen & Oliver R Jahre
 //  Copyright © 2017 Marco Gravbrøt. All rights reserved.
 //
 
