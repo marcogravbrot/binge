@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6092E451EEAE41E0045EAE8 /* SelectGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6092E441EEAE41E0045EAE8 /* SelectGameViewController.swift */; };
+		A6092E471EEAE73A0045EAE8 /* original_o-PINT-GLASS-BEER-facebook.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6092E461EEAE73A0045EAE8 /* original_o-PINT-GLASS-BEER-facebook.jpg */; };
 		A60C4AFD1EEAC18500A85038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60C4AFC1EEAC18500A85038 /* AppDelegate.swift */; };
 		A60C4AFF1EEAC18500A85038 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60C4AFE1EEAC18500A85038 /* ViewController.swift */; };
 		A60C4B021EEAC18500A85038 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A60C4B001EEAC18500A85038 /* Main.storyboard */; };
 		A60C4B041EEAC18500A85038 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A60C4B031EEAC18500A85038 /* Assets.xcassets */; };
 		A60C4B071EEAC18500A85038 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A60C4B051EEAC18500A85038 /* LaunchScreen.storyboard */; };
+		A60CDC421EEB5BBF0022F163 /* MostLikelyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60CDC411EEB5BBF0022F163 /* MostLikelyViewController.swift */; };
+		A62240921EEAFACC00D53CDB /* NeverGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62240911EEAFACC00D53CDB /* NeverGame.swift */; };
+		A69367AD1EEB636F0024EA61 /* TruthGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69367AC1EEB636F0024EA61 /* TruthGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A6092E441EEAE41E0045EAE8 /* SelectGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectGameViewController.swift; sourceTree = "<group>"; };
+		A6092E461EEAE73A0045EAE8 /* original_o-PINT-GLASS-BEER-facebook.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "original_o-PINT-GLASS-BEER-facebook.jpg"; path = "../../../original_o-PINT-GLASS-BEER-facebook.jpg"; sourceTree = "<group>"; };
 		A60C4AF91EEAC18500A85038 /* Binge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Binge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A60C4AFC1EEAC18500A85038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A60C4AFE1EEAC18500A85038 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +29,9 @@
 		A60C4B031EEAC18500A85038 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A60C4B061EEAC18500A85038 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A60C4B081EEAC18500A85038 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A60CDC411EEB5BBF0022F163 /* MostLikelyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MostLikelyViewController.swift; sourceTree = "<group>"; };
+		A62240911EEAFACC00D53CDB /* NeverGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NeverGame.swift; path = ../NeverGame.swift; sourceTree = "<group>"; };
+		A69367AC1EEB636F0024EA61 /* TruthGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TruthGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +67,13 @@
 				A60C4AFC1EEAC18500A85038 /* AppDelegate.swift */,
 				A60C4AFE1EEAC18500A85038 /* ViewController.swift */,
 				A60C4B001EEAC18500A85038 /* Main.storyboard */,
+				A69367AC1EEB636F0024EA61 /* TruthGameViewController.swift */,
+				A60CDC411EEB5BBF0022F163 /* MostLikelyViewController.swift */,
+				A62240911EEAFACC00D53CDB /* NeverGame.swift */,
+				A6092E441EEAE41E0045EAE8 /* SelectGameViewController.swift */,
 				A60C4B031EEAC18500A85038 /* Assets.xcassets */,
 				A60C4B051EEAC18500A85038 /* LaunchScreen.storyboard */,
+				A6092E461EEAE73A0045EAE8 /* original_o-PINT-GLASS-BEER-facebook.jpg */,
 				A60C4B081EEAC18500A85038 /* Info.plist */,
 			);
 			path = Binge;
@@ -126,6 +141,7 @@
 			files = (
 				A60C4B071EEAC18500A85038 /* LaunchScreen.storyboard in Resources */,
 				A60C4B041EEAC18500A85038 /* Assets.xcassets in Resources */,
+				A6092E471EEAE73A0045EAE8 /* original_o-PINT-GLASS-BEER-facebook.jpg in Resources */,
 				A60C4B021EEAC18500A85038 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,7 +153,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A62240921EEAFACC00D53CDB /* NeverGame.swift in Sources */,
+				A60CDC421EEB5BBF0022F163 /* MostLikelyViewController.swift in Sources */,
 				A60C4AFF1EEAC18500A85038 /* ViewController.swift in Sources */,
+				A6092E451EEAE41E0045EAE8 /* SelectGameViewController.swift in Sources */,
+				A69367AD1EEB636F0024EA61 /* TruthGameViewController.swift in Sources */,
 				A60C4AFD1EEAC18500A85038 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

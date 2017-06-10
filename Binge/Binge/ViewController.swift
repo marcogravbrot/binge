@@ -9,10 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var playButton: UIButton!
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask { return UIInterfaceOrientationMask.portrait }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        playButton.layer.cornerRadius = playButton.frame.height/2
+        playButton.layer.masksToBounds = true
+        playButton.clipsToBounds = true
     }
 
     override func didReceiveMemoryWarning() {
