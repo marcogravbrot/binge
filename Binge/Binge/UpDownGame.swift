@@ -17,6 +17,9 @@ class UpDownGame: UIViewController {
     @IBOutlet weak var downButton: UIButton!
     @IBOutlet weak var upButton: UIButton!
     
+    @IBOutlet weak var firstCard: UIImageView!
+    @IBOutlet weak var secondCard: UIImageView!
+    
     var colors : [UIColor] = [
         UIColor(red: 0, green: 120/255, blue: 1, alpha: 1),
         UIColor(red: 1, green: 0.4, blue: 0.4, alpha: 1),
@@ -35,11 +38,35 @@ class UpDownGame: UIViewController {
     func getColor() -> UIColor {
         return colors[Int(arc4random_uniform(UInt32(Int(colors.count))))]
     }
+    
+    var cards : [UIImage] = [
+        UIImage(named: "back")!,
+    ]
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask { return UIInterfaceOrientationMask.landscape }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for cardType in 1...4 {
+            for cardNum in 1...13 {
+                var finalCardType = String()
+                if cardType == 1 {
+                    finalCardType = "c"
+                } else if cardType == 2 {
+                    finalCardType = "h"
+                } else if cardType == 3 {
+                    finalCardType = "s"
+                } else if cardType == 4 {
+                    finalCardType = "d"
+                }
+                
+                cards.append(UIImage(named: finalCardType + String(cardNum))!)
+                //print(finalCardType + String(cardNum))
+            }
+        }
+        
+        cards.shuffle()
         
         color = self.getColor()
         

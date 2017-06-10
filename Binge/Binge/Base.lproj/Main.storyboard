@@ -616,7 +616,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="c1" translatesAutoresizingMaskIntoConstraints="NO" id="Zr4-tF-nHD">
                                         <rect key="frame" x="0.0" y="0.0" width="189.5" height="212"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="h6" translatesAutoresizingMaskIntoConstraints="NO" id="MwL-A4-6U5">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="MwL-A4-6U5">
                                         <rect key="frame" x="189.5" y="0.0" width="189.5" height="212"/>
                                     </imageView>
                                 </subviews>
@@ -644,6 +644,8 @@
                         <outlet property="backButton" destination="T1V-0p-9at" id="e13-Py-pM5"/>
                         <outlet property="background" destination="FH7-WG-m1R" id="rQU-9E-4bM"/>
                         <outlet property="downButton" destination="Oa7-70-HAX" id="cAT-fU-YEF"/>
+                        <outlet property="firstCard" destination="Zr4-tF-nHD" id="MhF-m6-pEm"/>
+                        <outlet property="secondCard" destination="MwL-A4-6U5" id="lBl-U6-iRD"/>
                         <outlet property="titleText" destination="qtB-3c-PHT" id="ai8-qU-uYT"/>
                         <outlet property="upButton" destination="UHM-bd-h3q" id="dug-EH-VD5"/>
                     </connections>
@@ -654,8 +656,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="back" width="179" height="250"/>
         <image name="c1" width="179" height="250"/>
-        <image name="h6" width="179" height="250"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="bXi-xx-clq"/>
