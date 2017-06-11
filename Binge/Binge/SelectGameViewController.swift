@@ -56,9 +56,22 @@ class SelectGameViewController: UIViewController {
         ],
         [
             "UP OR DOWN",
-            "Description Description Description Description Description Description Description Description Description Description Description Description Description ",
+            "You begin with one card, you then have to guess wether the next card will be higher or lower. If you guess correctly, the game will continue to the next person until someone loses who will then have to drink. Ace is the highest card.",
             "StartUpDownGame",
         ]
+    ]
+    
+    var colors : [UIColor] = [
+        UIColor(red: 0, green: 120/255, blue: 1, alpha: 1),
+        UIColor(red: 1, green: 0.4, blue: 0.4, alpha: 1),
+        
+        UIColor(red: 46/255, green: 204/255, blue: 113/255, alpha: 1.0),
+        UIColor(red: 155/255, green: 89/255, blue: 182/255, alpha: 1.0),
+        UIColor(red: 52/255, green: 73/255, blue: 94/255, alpha: 1.0),
+        UIColor(red: 243/255, green: 156/255, blue: 18/255, alpha: 1.0),
+        UIColor(red: 26/255, green: 188/255, blue: 156/255, alpha: 1.0),
+        UIColor(red: 211/255, green: 84/255, blue: 0/255, alpha: 1.0),
+        UIColor(red: 41/255, green: 128/255, blue: 185/255, alpha: 1.0)
     ]
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask { return UIInterfaceOrientationMask.portrait }
@@ -85,6 +98,8 @@ class SelectGameViewController: UIViewController {
 
         self.gameDescription.text = description as? String
         self.gameCount.currentPage = self.currentCount
+        
+        self.view.backgroundColor = colors[self.currentCount]
         
         /*let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [
@@ -136,6 +151,8 @@ class SelectGameViewController: UIViewController {
                 self.gameDescription.fadeTransition(0.2)
                 self.gameDescription.text = description
                 self.gameCount.currentPage = self.currentCount
+                
+                self.view.backgroundColor = self.colors[self.currentCount]
             })
         }
     }
@@ -151,11 +168,25 @@ class SelectGameViewController: UIViewController {
                     let description = gameList[self.currentCount][1]
                     
                     switchGame(title: title as! String, description: description as! String)
+                } else {
+                    self.currentCount = gameList.count-1
+                    
+                    let title = gameList[self.currentCount][0]
+                    let description = gameList[self.currentCount][1]
+                    
+                    switchGame(title: title as! String, description: description as! String)
                 }
             case UISwipeGestureRecognizerDirection.left:
                 if (self.currentCount < self.gameCount.numberOfPages-1) {
                     self.currentCount += 1
  
+                    let title = gameList[self.currentCount][0]
+                    let description = gameList[self.currentCount][1]
+                    
+                    switchGame(title: title as! String, description: description as! String)
+                } else {
+                    self.currentCount = 0
+                    
                     let title = gameList[self.currentCount][0]
                     let description = gameList[self.currentCount][1]
                     
@@ -173,6 +204,42 @@ class SelectGameViewController: UIViewController {
         }
     }
 
+    @IBAction func nextGameSlide(_ sender: Any) {
+        if (self.currentCount < self.gameCount.numberOfPages-1) {
+            self.currentCount += 1
+            
+            let title = gameList[self.currentCount][0]
+            let description = gameList[self.currentCount][1]
+            
+            switchGame(title: title as! String, description: description as! String)
+        } else {
+            self.currentCount = 0
+            
+            let title = gameList[self.currentCount][0]
+            let description = gameList[self.currentCount][1]
+            
+            switchGame(title: title as! String, description: description as! String)
+        }
+    }
+    
+    @IBAction func backGameSlide(_ sender: Any) {
+        if (self.currentCount > 0) {
+            self.currentCount -= 1
+            
+            let title = gameList[self.currentCount][0]
+            let description = gameList[self.currentCount][1]
+            
+            switchGame(title: title as! String, description: description as! String)
+        } else {
+            self.currentCount = gameList.count-1
+            
+            let title = gameList[self.currentCount][0]
+            let description = gameList[self.currentCount][1]
+            
+            switchGame(title: title as! String, description: description as! String)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

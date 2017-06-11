@@ -42,6 +42,9 @@ class UpDownGame: UIViewController {
     var cards : [[Any]] = []
     var cardsCount = 0
     
+    var block = UIView()
+    var label = UILabel()
+    
     var isGuessing = true
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask { return UIInterfaceOrientationMask.landscape }
@@ -103,6 +106,24 @@ class UpDownGame: UIViewController {
         upButton.clipsToBounds = true
         
         // Do any additional setup after loading the view.
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100), execute: {
+            self.block = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+            self.block.backgroundColor = UIColor.clear
+            self.block.isUserInteractionEnabled = false
+    
+            self.view.addSubview(self.block)
+            
+            self.label = UILabel(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+            self.label.center = CGPoint(x: UIScreen.main.bounds.width/2, y: UIScreen.main.bounds.height/2)
+            self.label.textAlignment = .center
+            self.label.text = "DRINK!"
+            self.label.font = UIFont(name: "AvenirNext-Bold", size: 72)
+            self.label.textColor = UIColor.clear
+            self.label.isUserInteractionEnabled = false
+            
+            self.view.addSubview(self.label)
+        })
     }
     
     override func didReceiveMemoryWarning() {
@@ -112,7 +133,7 @@ class UpDownGame: UIViewController {
     
     func nextOption(up: Bool) {
         if cardsCount == cards.count-1 {
-            return
+            cardsCount = 0
         }
         
         if isGuessing {
@@ -141,13 +162,15 @@ class UpDownGame: UIViewController {
                     if secondCardCount! > firstCardCount! {
                         print("true")
                     } else {
-                        print("false")
+                        self.block.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+                        self.label.textColor = UIColor.white
                     }
                 } else {
                     if secondCardCount! < firstCardCount! {
                         print("true")
                     } else {
-                        print("false")
+                        self.block.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+                        self.label.textColor = UIColor.white
                     }
                 }
             } else {
@@ -178,6 +201,9 @@ class UpDownGame: UIViewController {
                     
                     self.upButton.isHidden = false
                     self.downButton.isHidden = false
+                    
+                    self.block.backgroundColor = UIColor.clear
+                    self.label.textColor = UIColor.clear
                 }, completion: nil)
             }
         }
