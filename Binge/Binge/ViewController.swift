@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         playButton.backgroundColor = UIColor.clear
-        playButton.layer.borderWidth = 2
+        playButton.layer.borderWidth = 4
         playButton.layer.borderColor = UIColor.white.cgColor
         playButton.layer.cornerRadius = playButton.frame.height/2
         playButton.layer.masksToBounds = true

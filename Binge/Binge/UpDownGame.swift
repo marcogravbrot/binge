@@ -39,14 +39,18 @@ class UpDownGame: UIViewController {
         return colors[Int(arc4random_uniform(UInt32(Int(colors.count))))]
     }
     
-    var cards : [UIImage] = [
-        UIImage(named: "back")!,
-    ]
+    var cards : [[Any]] = []
+    var cardsCount = 0
+    
+    var isGuessing = true
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask { return UIInterfaceOrientationMask.landscape }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapScreen))
+        self.view.addGestureRecognizer(tapGesture)
         
         for cardType in 1...4 {
             for cardNum in 1...13 {
@@ -61,12 +65,15 @@ class UpDownGame: UIViewController {
                     finalCardType = "d"
                 }
                 
-                cards.append(UIImage(named: finalCardType + String(cardNum))!)
+                cards.append([cardNum, UIImage(named: finalCardType + String(cardNum))!])
                 //print(finalCardType + String(cardNum))
             }
         }
         
         cards.shuffle()
+            
+        firstCard.image = cards[cardsCount][1] as? UIImage
+        secondCard.image = UIImage(named: "back")
         
         color = self.getColor()
         
@@ -103,23 +110,93 @@ class UpDownGame: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func nextOption() {
-        DispatchQueue.main.async {
-            UIView.animate(withDuration: 0.2, animations: {
-                self.color = self.getColor()
+    func nextOption(up: Bool) {
+        if cardsCount == cards.count-1 {
+            return
+        }
+        
+        if isGuessing {
+            var firstCardCount = cards[cardsCount][0] as? Int
+            
+            cardsCount += 1
+            
+            var secondCardCount = cards[cardsCount][0] as? Int
+            
+            if firstCardCount == 1 {
+                firstCardCount = 14
+            }
+            
+            if secondCardCount == 1 {
+                secondCardCount = 14
+            }
+            
+            secondCard.fadeTransition(0.2)
+            secondCard.image = cards[cardsCount][1] as? UIImage
+            
+            //print(String(describing: firstCardCount))
+            //print(String(describing: secondCardCount))
+            
+            if !(secondCardCount == firstCardCount) {
+                if up {
+                    if secondCardCount! > firstCardCount! {
+                        print("true")
+                    } else {
+                        print("false")
+                    }
+                } else {
+                    if secondCardCount! < firstCardCount! {
+                        print("true")
+                    } else {
+                        print("false")
+                    }
+                }
+            } else {
+                print("true (equal)")
+            }
+            
+            DispatchQueue.main.async {
+                self.upButton.isHidden = true
+                self.downButton.isHidden = true
+            }
+            
+            isGuessing = false
+        } else {
+            isGuessing = true
+        
+            DispatchQueue.main.async {
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.color = self.getColor()
                 
-                self.backButton.setTitleColor(self.color, for: .normal)
-                self.background.backgroundColor = self.color
-            }, completion: nil)
+                    self.backButton.setTitleColor(self.color, for: .normal)
+                    self.background.backgroundColor = self.color
+                    
+                    self.firstCard.fadeTransition(0.2)
+                    self.firstCard.image = self.secondCard.image
+                    
+                    self.secondCard.fadeTransition(0.2)
+                    self.secondCard.image = UIImage(named: "back")
+                    
+                    self.upButton.isHidden = false
+                    self.downButton.isHidden = false
+                }, completion: nil)
+            }
         }
     }
     
+    func tapScreen() {
+        if isGuessing {
+            return
+        }
+        
+        nextOption(up: false)
+    }
+    
     @IBAction func upButtonPress(_ sender: Any) {
-        nextOption()
+        nextOption(up: true)
     }
     
     @IBAction func downButtonPress(_ sender: Any) {
-        nextOption()
+        nextOption(up: false)
     }
     
 
