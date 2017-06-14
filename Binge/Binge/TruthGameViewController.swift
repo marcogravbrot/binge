@@ -29,7 +29,16 @@ class TruthGameViewController: UIViewController {
         UIColor(red: 243/255, green: 156/255, blue: 18/255, alpha: 1.0),
         UIColor(red: 26/255, green: 188/255, blue: 156/255, alpha: 1.0),
         UIColor(red: 211/255, green: 84/255, blue: 0/255, alpha: 1.0),
-        UIColor(red: 41/255, green: 128/255, blue: 185/255, alpha: 1.0)
+        UIColor(red: 41/255, green: 128/255, blue: 185/255, alpha: 1.0),
+        
+        UIColor(red: 255/255, green: 59/255, blue: 48/255, alpha: 1.0),
+        UIColor(red: 255/255, green: 149/255, blue: 0/255, alpha: 1.0),
+        UIColor(red: 255/255, green: 204/255, blue: 76/255, alpha: 1.0),
+        UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1.0),
+        UIColor(red: 90/255, green: 200/255, blue: 250/255, alpha: 1.0),
+        UIColor(red: 0/255, green: 122/255, blue: 255/255, alpha: 1.0),
+        UIColor(red: 88/255, green: 86/255, blue: 214/255, alpha: 1.0),
+        UIColor(red: 255/255, green: 45/255, blue: 85/255, alpha: 1.0)
     ]
     
     var color = UIColor()
