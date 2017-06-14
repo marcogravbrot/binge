@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A6092E451EEAE41E0045EAE8 /* SelectGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6092E441EEAE41E0045EAE8 /* SelectGameViewController.swift */; };
+		A60BC0661EF001A900926EFA /* RingOfFireGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60BC0651EF001A900926EFA /* RingOfFireGame.swift */; };
 		A60C4AFD1EEAC18500A85038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60C4AFC1EEAC18500A85038 /* AppDelegate.swift */; };
 		A60C4AFF1EEAC18500A85038 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60C4AFE1EEAC18500A85038 /* ViewController.swift */; };
 		A60C4B021EEAC18500A85038 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A60C4B001EEAC18500A85038 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		A6092E441EEAE41E0045EAE8 /* SelectGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectGameViewController.swift; sourceTree = "<group>"; };
+		A60BC0651EF001A900926EFA /* RingOfFireGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RingOfFireGame.swift; path = ../RingOfFireGame.swift; sourceTree = "<group>"; };
 		A60C4AF91EEAC18500A85038 /* Binge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Binge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A60C4AFC1EEAC18500A85038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A60C4AFE1EEAC18500A85038 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,13 +73,14 @@
 				A60C4AFC1EEAC18500A85038 /* AppDelegate.swift */,
 				A60C4AFE1EEAC18500A85038 /* ViewController.swift */,
 				A60C4B001EEAC18500A85038 /* Main.storyboard */,
+				A6092E441EEAE41E0045EAE8 /* SelectGameViewController.swift */,
 				A642FD381EECAAC900F386E1 /* UpDownGame.swift */,
 				A69367AC1EEB636F0024EA61 /* TruthGameViewController.swift */,
 				A60CDC411EEB5BBF0022F163 /* MostLikelyViewController.swift */,
 				A62240911EEAFACC00D53CDB /* NeverGame.swift */,
-				A6092E441EEAE41E0045EAE8 /* SelectGameViewController.swift */,
 				A642FD361EEC9CDD00F386E1 /* CardSpeaksGame.swift */,
 				A642FD321EEBE2EA00F386E1 /* ListGame.swift */,
+				A60BC0651EF001A900926EFA /* RingOfFireGame.swift */,
 				A60C4B031EEAC18500A85038 /* Assets.xcassets */,
 				A60C4B051EEAC18500A85038 /* LaunchScreen.storyboard */,
 				A60C4B081EEAC18500A85038 /* Info.plist */,
@@ -166,6 +169,7 @@
 				A6092E451EEAE41E0045EAE8 /* SelectGameViewController.swift in Sources */,
 				A69367AD1EEB636F0024EA61 /* TruthGameViewController.swift in Sources */,
 				A642FD331EEBE2EA00F386E1 /* ListGame.swift in Sources */,
+				A60BC0661EF001A900926EFA /* RingOfFireGame.swift in Sources */,
 				A60C4AFD1EEAC18500A85038 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

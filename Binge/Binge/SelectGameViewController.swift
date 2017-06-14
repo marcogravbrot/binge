@@ -35,6 +35,11 @@ class SelectGameViewController: UIViewController {
             "StartNeverGame"
         ],
         [
+            "RING OF FIRE",
+            "A random statement will appear on screen and you will read it out loud. Anyone who admits to have done what you read out will need to take a drink.",
+            "StartRingOfFire",
+        ],
+        [
             "MOST LIKELY TO",
             "A random statement will appear on screen where you will read it out loud. After three seconds everyone will point to the person they believe would be most likely to do what you read out and the one who receives the most votes will take a drink.",
             "StartMostLikely"

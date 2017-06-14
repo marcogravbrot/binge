@@ -131,7 +131,12 @@ class UpDownGame: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    var failed = false
+    var ready = false
+    
     func nextOption(up: Bool) {
+        failed = false
+        
         if cardsCount == cards.count-1 {
             cardsCount = 0
         }
@@ -162,6 +167,8 @@ class UpDownGame: UIViewController {
                     if secondCardCount! > firstCardCount! {
                         print("true")
                     } else {
+                        failed = true
+                        
                         self.block.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
                         self.label.textColor = UIColor.white
                     }
@@ -169,6 +176,8 @@ class UpDownGame: UIViewController {
                     if secondCardCount! < firstCardCount! {
                         print("true")
                     } else {
+                        failed = true
+                        
                         self.block.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
                         self.label.textColor = UIColor.white
                     }
@@ -183,6 +192,16 @@ class UpDownGame: UIViewController {
             }
             
             isGuessing = false
+            
+            if (!failed) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(550), execute: {
+                    self.nextOption(up: false)
+                })
+            } else {
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                    self.ready = true
+                })
+            }
         } else {
             isGuessing = true
         
@@ -210,11 +229,15 @@ class UpDownGame: UIViewController {
     }
     
     func tapScreen() {
-        if isGuessing {
+        if isGuessing || (!failed) {
             return
         }
         
-        nextOption(up: false)
+        if (failed && ready) {
+            nextOption(up: false)
+            
+            ready = false
+        }
     }
     
     @IBAction func upButtonPress(_ sender: Any) {

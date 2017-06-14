@@ -163,7 +163,7 @@ class MostLikelyViewController: UIViewController {
         text.textColor = UIColor.white
         titleText.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.55)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5), execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
             _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.timerUpdate), userInfo: nil, repeats: true)
         })
     }
@@ -187,7 +187,7 @@ class MostLikelyViewController: UIViewController {
     
     @IBAction func nextOption(_ sender: UITapGestureRecognizer) {
         if !canSkip {
-            return
+            return 
         }
         
         if (mostLikelyCount < mostLikely.count-1) {
@@ -202,7 +202,7 @@ class MostLikelyViewController: UIViewController {
         
         canSkip = false
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
             self.timerCount = 3
         })
         
