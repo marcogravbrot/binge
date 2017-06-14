@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70B2F0181EF1F6ED00869430 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B2F0161EF1F6ED00869430 /* Fabric.framework */; };
+		70B2F0191EF1F6ED00869430 /* GameAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B2F0171EF1F6ED00869430 /* GameAnalytics.framework */; };
+		70B2F01B1EF1F89A00869430 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B2F01A1EF1F89A00869430 /* Crashlytics.framework */; };
 		A6092E451EEAE41E0045EAE8 /* SelectGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6092E441EEAE41E0045EAE8 /* SelectGameViewController.swift */; };
 		A60BC0661EF001A900926EFA /* RingOfFireGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60BC0651EF001A900926EFA /* RingOfFireGame.swift */; };
 		A60C4AFD1EEAC18500A85038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60C4AFC1EEAC18500A85038 /* AppDelegate.swift */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70B2F0161EF1F6ED00869430 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
+		70B2F0171EF1F6ED00869430 /* GameAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GameAnalytics.framework; sourceTree = SOURCE_ROOT; };
+		70B2F01A1EF1F89A00869430 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
 		A6092E441EEAE41E0045EAE8 /* SelectGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectGameViewController.swift; sourceTree = "<group>"; };
 		A60BC0651EF001A900926EFA /* RingOfFireGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RingOfFireGame.swift; path = ../RingOfFireGame.swift; sourceTree = "<group>"; };
 		A60C4AF91EEAC18500A85038 /* Binge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Binge.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +51,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70B2F0181EF1F6ED00869430 /* Fabric.framework in Frameworks */,
+				70B2F01B1EF1F89A00869430 /* Crashlytics.framework in Frameworks */,
+				70B2F0191EF1F6ED00869430 /* GameAnalytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +79,9 @@
 		A60C4AFB1EEAC18500A85038 /* Binge */ = {
 			isa = PBXGroup;
 			children = (
+				70B2F01A1EF1F89A00869430 /* Crashlytics.framework */,
+				70B2F0161EF1F6ED00869430 /* Fabric.framework */,
+				70B2F0171EF1F6ED00869430 /* GameAnalytics.framework */,
 				A60C4AFC1EEAC18500A85038 /* AppDelegate.swift */,
 				A60C4AFE1EEAC18500A85038 /* ViewController.swift */,
 				A60C4B001EEAC18500A85038 /* Main.storyboard */,
@@ -98,6 +110,7 @@
 				A60C4AF51EEAC18500A85038 /* Sources */,
 				A60C4AF61EEAC18500A85038 /* Frameworks */,
 				A60C4AF71EEAC18500A85038 /* Resources */,
+				70B2F0151EF1F6C800869430 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -155,6 +168,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		70B2F0151EF1F6C800869430 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 7bd822ceb6ea1215c74399b21d1576535ded9902 83f53efa436b609244d68317b665b5d2c5315bff114863c32659524e5327c618";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A60C4AF51EEAC18500A85038 /* Sources */ = {
@@ -297,6 +326,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = QA5PWCPA8T;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Binge/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -314,6 +347,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = QA5PWCPA8T;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Binge/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -20,6 +20,7 @@ extension UIView {
     }
 }
 
+
 class SelectGameViewController: UIViewController {
     //@IBOutlet weak var image: UIImageView!
 
@@ -170,7 +171,7 @@ class SelectGameViewController: UIViewController {
             })
         }
     }
-    
+
     func respondToSwipeGesture(gesture: UIGestureRecognizer) {
         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
             switch swipeGesture.direction {
