@@ -2,6 +2,8 @@
 
 ## The drinking game app
 
+## It's a really good app!
+
 ### Colors
 
 - ![#ff3b30](https://placehold.it/15/ff3b30/000000?text=+) `#ff3b30`
